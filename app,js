@@ -1,0 +1,6 @@
+const thumbnails = document.getElementById("thumbnails");
+const displayContainer = document.getElementById("displayContainer");
+
+const images = {
+  src: 'https://www.dynastyclothingstore.com/cdn/shop/articles/utilizing-wing-chun-kung-fu-in-stand-up-fighting-with-videos-dynasty-clothing-mma.jpg?v=1598384788&width=1300"alt: "still from Ip Man movie',
+};
