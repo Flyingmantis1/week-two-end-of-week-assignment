@@ -1,10 +1,18 @@
 .thumbnails {
   height: 10vh;
-  width: 100vw;
+  width: 200vw;
   overflow: scroll;
+  justify-content: center;
 }
 
 .thumbnails > img {
   height: 10vh;
   width: auto;
+}
+
+.displayContainer {
+  height: 100px;
+  width: 100px;
+
+  justify-content: center;
 }
