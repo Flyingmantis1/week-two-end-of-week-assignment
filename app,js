@@ -1,6 +1,54 @@
 const thumbnails = document.getElementById("thumbnails");
 const displayContainer = document.getElementById("displayContainer");
 
-const images = {
-  src: 'https://www.dynastyclothingstore.com/cdn/shop/articles/utilizing-wing-chun-kung-fu-in-stand-up-fighting-with-videos-dynasty-clothing-mma.jpg?v=1598384788&width=1300"alt: "still from Ip Man movie',
-};
+const images = [
+  {
+    src: "https://www.dynastyclothingstore.com/cdn/shop/articles/utilizing-wing-chun-kung-fu-in-stand-up-fighting-with-videos-dynasty-clothing-mma.jpg?v=1598384788&width=1300",
+    alt: "still from Ip Man movie",
+  },
+
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5gUYsdUDZN_5YFZ9Qr_gYgoPIc0mnnSsrLw&s",
+    alt: "Donnie Yen and Sammo Hung Chi Sao",
+  },
+
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZJ5zSg2doC7SGcZlS4tcZj_z3PFtGOj9s5g&s",
+    alt: "Still of the real Ip Man completeing hand technique",
+  },
+];
+
+function createThumbnails() {
+  images.forEach(function (image) {
+    let imageElement = document.createElement("img");
+    console.log(image);
+
+    imageElement.src = image.src;
+
+    imageElement.addEventListener("click", function () {
+      console.log(image);
+
+      createBigImage(image);
+    });
+    thumbnails.appendChild(imageElement);
+  });
+}
+
+createThumbnails();
+
+createThumbnails();
+
+{
+  src: "something";
+  alt: "something";
+}
+
+function createBigImage(imgDetails) {
+  displayContainer.innerHTML = "";
+  const bigImage = document.createElement("img");
+
+  bigImage.src = imgDetails.src;
+  bigImage.alt = imgDetails.alt;
+
+  displayContainer.appendChild(bigImage);
+}

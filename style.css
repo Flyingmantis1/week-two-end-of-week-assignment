@@ -1,4 +1,10 @@
-img {
-  height: 650px;
-  width: 650px;
+.thumbnails {
+  height: 10vh;
+  width: 100vw;
+  overflow: scroll;
+}
+
+.thumbnails > img {
+  height: 10vh;
+  width: auto;
 }
